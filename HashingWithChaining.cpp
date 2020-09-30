@@ -43,9 +43,9 @@ void HashingWithChaining::deleteItem(int x) {
 // display all the elements in the given hash table
 void HashingWithChaining::display() {
 	for (int i=0; i<slots; i++) {
-		cout << i;
+		cout << i << " -> ";
 		for (auto val : table[i])
-			cout << " --> " << val;
+			cout << val << "   ";
 		cout << endl; 
 	}
 }
@@ -75,39 +75,3 @@ int main() {
 
 	return 0;
 }
-
-Output: 
-
-Initial elements in hash table
-0 --> 15 --> 30
-1
-2
-3 --> 33
-4
-5 --> 20
-6
-7
-8 --> 8
-9
-10 --> 100 --> 25
-11
-12 --> 87 --> 102
-13
-14 --> 29
-
-After deleting 100 from hash table
-0 --> 15 --> 30
-1
-2
-3 --> 33
-4
-5 --> 20
-6
-7
-8 --> 8
-9
-10 --> 25
-11
-12 --> 87 --> 102
-13
-14 --> 29
